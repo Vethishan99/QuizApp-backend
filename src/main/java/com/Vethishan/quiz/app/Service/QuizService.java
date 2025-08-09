@@ -44,11 +44,18 @@ public class QuizService {
         return new ResponseEntity<>(questionsForUser, HttpStatus.OK);
     }
 
-    /*public ResponseEntity<Integer> calculateResults(int id, List<Response> responses) {
+    public ResponseEntity<Integer> calculateResults(int id, List<Response> responses) {
         Quiz quiz = quizDAO.findById(id).get();
         List<Question> questions=quiz.getQuestions();
         int right=0;
         int i=0;
-        for(Response r:responses){}
-    }*/
+        for(Response r:responses){
+            if(r.getResponse().equals(questions.get(i).getRightAnswer()))
+                right++;
+
+            i++;
+        }
+
+        return new ResponseEntity<>(right, HttpStatus.OK);
+    }
 }
