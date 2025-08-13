@@ -3,7 +3,6 @@ package com.Vethishan.quiz.app.Controller;
 import com.Vethishan.quiz.app.Entity.Question;
 import com.Vethishan.quiz.app.Service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
